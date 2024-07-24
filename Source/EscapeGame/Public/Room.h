@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Room.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnRoomSucceeded);
+
 UCLASS()
 class ESCAPEGAME_API ARoom : public AActor
 {
@@ -32,6 +34,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="DEBUG")
 	bool DebugRoomInformation;
 
+	UPROPERTY(BlueprintAssignable, Category="EventDispatcher")
+	FOnRoomSucceeded OnRoomSucceeded;
+	
 	//Return the state of the room
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	bool GetRoomValidated();
