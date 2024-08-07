@@ -7,5 +7,6 @@ UENUM(BlueprintType)
 enum class E_Pollutants : uint8 {
 	VOC UMETA(DisplayName = "VOC"),
 	PM UMETA(DisplayName = "PM"),
-	NOx UMETA(DisplayName = "NOx")
+	NOx UMETA(DisplayName = "NOx"),
+	CO2 UMETA(DisplayName = "CO2")
 };

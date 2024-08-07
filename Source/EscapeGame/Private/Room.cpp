@@ -7,17 +7,18 @@ ARoom::ARoom()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	DefaultSceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
+	RootComponent = DefaultSceneRoot;
+	
+	PlayerSpawn = CreateDefaultSubobject<UArrowComponent>("PlayerSpawn");
+	PlayerSpawn->SetupAttachment(DefaultSceneRoot);
+
 }
 
 bool ARoom::CheckRoomResult_Implementation()
 {
 	//Needs to be overwritten in the child BP
 	return false;
-}
-
-void ARoom::RoomSucceeded_Implementation()
-{
-	
 }
 
 void ARoom::UnlockKey_Implementation()

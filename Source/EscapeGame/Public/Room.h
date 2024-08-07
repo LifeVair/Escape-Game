@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/ArrowComponent.h"
 #include "GameFramework/Actor.h"
 #include "Room.generated.h"
 
@@ -36,6 +37,12 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category="EventDispatcher")
 	FOnRoomSucceeded OnRoomSucceeded;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,Category="components")
+	USceneComponent* DefaultSceneRoot;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,Category="components")
+	UArrowComponent* PlayerSpawn;
 	
 	//Return the state of the room
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
@@ -46,12 +53,9 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void UnlockKey();
-	
+
+	//Return true if the room is succeeded
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	bool CheckRoomResult();
 	virtual bool CheckRoomResult_Implementation();
-
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void RoomSucceeded();
-	virtual void RoomSucceeded_Implementation();
 };
