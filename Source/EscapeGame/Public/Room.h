@@ -26,21 +26,27 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Give the validation status of the room
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool RoomValidated;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FTransform PlayerSpawnTransform;
-
+	// Time (in seconds) available to resolve the room 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Blueprintable)
+	int AvailableTimeToResolve;
+	
+	// Give the transform where we want the player to spawn in the room
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="DEBUG")
 	bool DebugRoomInformation;
 
+	// Dispatcher allowing to know when a room is succeeded 
 	UPROPERTY(BlueprintAssignable, Category="EventDispatcher")
 	FOnRoomSucceeded OnRoomSucceeded;
-
+	
+	// Is used to spawn the playerspawn arrow 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,Category="components")
 	USceneComponent* DefaultSceneRoot;
-	
+
+	// Arrow indicating the player spawn location
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,Category="components")
 	UArrowComponent* PlayerSpawn;
 	
@@ -48,9 +54,11 @@ public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	bool GetRoomValidated();
 
+	//Called to spawn the player 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void SpawnPlayer(FTransform SpawnTransform);
 
+	//Unlock the key of the game (most of the time a filter), should be overriden depending on need 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void UnlockKey();
 
