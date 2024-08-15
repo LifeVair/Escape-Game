@@ -1,6 +1,8 @@
 # Life V-aiR - Escape Game
+[Cover Image](GameVisuals/herocover.png)
 ## Project description
 ## Screenshots
+[The Station Exterior](GameVisuals/Screenshot%201.png)
 ## Clone and develop
 The whole project is open source and can be clone on your own machine. To understand the game architecture, please check the wiki : https://github.com/LifeVair/Escape-Game/wiki
 ## Contributors 
