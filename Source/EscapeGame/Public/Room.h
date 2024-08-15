@@ -51,13 +51,9 @@ public:
 	UArrowComponent* PlayerSpawn;
 	
 	//Return the state of the room
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintGetter)
 	bool GetRoomValidated();
-
-	//Called to spawn the player 
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void SpawnPlayer(FTransform SpawnTransform);
-
+	
 	//Unlock the key of the game (most of the time a filter), should be overriden depending on need 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void UnlockKey();

@@ -5,7 +5,7 @@
 ARoom::ARoom()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	DefaultSceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultSceneRoot"));
 	RootComponent = DefaultSceneRoot;
@@ -30,16 +30,7 @@ void ARoom::UnlockKey_Implementation()
 	}
 }
 
-void ARoom::SpawnPlayer_Implementation(FTransform SpawnTransform)
-{
-	if (DebugRoomInformation)
-	{
-		UE_LOG(LogTemp,Display,TEXT("Spawning player"));
-	}
-}
-
-
-bool ARoom::GetRoomValidated_Implementation()
+bool ARoom::GetRoomValidated()
 {
 	return RoomValidated;
 }
