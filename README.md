@@ -1,4 +1,9 @@
-# Escape-Game
-
-### Credits 
+# Life V-aiR - Escape Game
+## Project description
+## Screenshots
+## Contributors 
+## License
+https://github.com/LifeVair/Escape-Game/wiki
+## Credits 
+This sections gather every credits for persons that have a piece of artwork, photo or any file that has been used in the design or development of the game.
 Photo by <a href="https://unsplash.com/@catauggie?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">SnapSaga</a> on <a href="https://unsplash.com/photos/a-rainbow-in-the-sky-over-a-field-bAym4VVqVJg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
