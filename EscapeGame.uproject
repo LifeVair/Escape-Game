@@ -21,7 +21,8 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android"
+				"Android",
+				"HoloLens"
 			]
 		},
 		{
@@ -32,6 +33,17 @@
 				"Linux",
 				"Android",
 				"HoloLens"
+			]
+		},
+		{
+			"Name": "GPULightmass",
+			"Enabled": true
+		},
+		{
+			"Name": "PixWinPlugin",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64"
 			]
 		}
 	],
