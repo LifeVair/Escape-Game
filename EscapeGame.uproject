@@ -37,7 +37,7 @@
 		},
 		{
 			"Name": "GPULightmass",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "PixWinPlugin",
