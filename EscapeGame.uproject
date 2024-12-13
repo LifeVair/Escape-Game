@@ -37,7 +37,7 @@
 		},
 		{
 			"Name": "GPULightmass",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "PixWinPlugin",
@@ -45,6 +45,10 @@
 			"SupportedTargetPlatforms": [
 				"Win64"
 			]
+		},
+		{
+			"Name": "HDRIBackdrop",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
