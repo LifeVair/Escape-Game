@@ -1,0 +1,6 @@
+<!-- This file is a template to overwrite some default permissions of android manifest when building apk from unreal -->
+<!-- This file is not in use if it stays there. -->
+<!-- MOVE THIS FILE TO <project>\Intermediate\Android\arm64 for the engine to use it-->
+
+<uses-feature android:glEsVersion="0x00030000" android:required="true" />
+<uses-permission android:name="android.permission.VIBRATE" />
