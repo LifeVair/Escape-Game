@@ -50,3 +50,8 @@ void ARoom::Tick(float DeltaTime)
 
 }
 
+void ARoom::RoomSucceeded()
+{
+	OnRoomSucceeded.Broadcast();
+}
+

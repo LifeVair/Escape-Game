@@ -18,7 +18,6 @@ public:
 	// Sets default values for this actor's properties
 	ARoom();
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -39,8 +38,11 @@ public:
 	bool DebugRoomInformation;
 
 	// Dispatcher allowing to know when a room is succeeded 
-	UPROPERTY(BlueprintAssignable, Category="EventDispatcher")
+	UPROPERTY(BlueprintAssignable, Category="Events")
 	FOnRoomSucceeded OnRoomSucceeded;
+
+	UFUNCTION(BlueprintCallable, Category = "Events")
+	void RoomSucceeded();
 	
 	// Is used to spawn the playerspawn arrow 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,Category="components")
@@ -53,6 +55,8 @@ public:
 	//Return the state of the room
 	UFUNCTION(BlueprintCallable, BlueprintGetter)
 	bool GetRoomValidated();
+
+	
 	
 	//Unlock the key of the game (most of the time a filter), should be overriden depending on need 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
