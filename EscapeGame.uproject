@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.2",
+	"EngineAssociation": "{96569D96-4849-9CB6-FD9F-CEA634811D95}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -22,7 +22,7 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"VisionOS"
 			]
 		},
 		{
@@ -32,7 +32,8 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"Mac",
+				"IOS"
 			]
 		},
 		{
@@ -49,6 +50,15 @@
 		{
 			"Name": "HDRIBackdrop",
 			"Enabled": true
+		},
+		{
+			"Name": "OculusXR",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/8313d8d7e7cf4e03a33e79eb757bccba",
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Android"
+			]
 		}
 	],
 	"TargetPlatforms": [
