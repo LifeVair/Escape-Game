@@ -18,6 +18,7 @@ ARoom::ARoom()
 bool ARoom::CheckRoomResult_Implementation()
 {
 	//Needs to be overwritten in the child BP
+	
 	return false;
 }
 
